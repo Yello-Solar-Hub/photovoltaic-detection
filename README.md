@@ -135,3 +135,42 @@ In particular, focusing only on the residential area images we got on the test s
 
 ### Pre-trained models & data
 Both are available [here](https://drive.google.com/drive/folders/1nwEv1DNEPEkCbO4TQbw965zjbOVL-x5k?usp=sharing)
+
+## Web Interface
+
+A minimal Next.js application is available in `apps/web` and configured using Turborepo. To run the web interface you need Node.js and npm installed.
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start development server
+
+```bash
+npm run dev
+```
+
+This will start the Next.js server on <http://localhost:3000>. The Python code in this repository can be integrated by exposing APIs or running the existing scripts separately (e.g. `python run.py`) and connecting to them from the frontend.
+
+### Build
+
+```bash
+npm run build
+```
+
+
+
+## Business Contracts and Maintenance
+
+Sample contract templates and operational guides are available in `docs/contracts`. These files include:
+
+- `integrator-operational-agreement.md` for collaborations with solar integrators
+- `service-provider-contract.md` for third-party maintenance companies
+- `affiliate-program.md` outlining commission-based partnerships
+- `maintenance-dossier-template.md` to track preventive and corrective actions
+- `tokenization-smart-contracts.md` describing NFT and carbon credit workflows
+- `energy-tier-reference.md` summarizing system categories and roof area guidelines
+
+Use these documents as starting points when negotiating with partners and structuring project documentation.
