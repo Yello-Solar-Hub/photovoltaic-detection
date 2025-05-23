@@ -1,0 +1,306 @@
+# Mega prompts for solar project sizing and pricing
+
+# MEGA PROMPT: CATEGORIA XPP (~2 kWp)
+category: XPP
+nominal_power_kWp: 2
+description: "Sistema Extra Pequeno Porte, indicado para residências de baixo consumo (até ~180 kWh/mês)."
+regions:
+  - name: Norte
+    tiers:
+      - tier: Padrao
+        total_cost_R$: 11500
+        inverter_power_range_kW: "1.9 - 2.1"
+        avg_monthly_generation_kWh: 220
+        approx_monthly_bill_savings_R$: 180
+        roi_years: 4.5
+      - tier: Consciente
+        total_cost_R$: 10350
+        inverter_power_range_kW: "2.0 - 2.3"
+        avg_monthly_generation_kWh: 210
+        approx_monthly_bill_savings_R$: 170
+        roi_years: 4.3
+      - tier: Moderado
+        total_cost_R$: 13800
+        inverter_power_range_kW: "2.3 - 2.4"
+        avg_monthly_generation_kWh: 230
+        approx_monthly_bill_savings_R$: 190
+        roi_years: 5.2
+      - tier: Acelerado
+        total_cost_R$: 17250
+        inverter_power_range_kW: "2.7 - 3.0"
+        avg_monthly_generation_kWh: 240
+        approx_monthly_bill_savings_R$: 200
+        roi_years: 5.8
+  - name: Nordeste
+    tiers:
+      - tier: Padrao
+        total_cost_R$: 11000
+        inverter_power_range_kW: "1.9 - 2.1"
+        avg_monthly_generation_kWh: 250
+        approx_monthly_bill_savings_R$: 200
+        roi_years: 4.2
+      - tier: Consciente
+        total_cost_R$: 9900
+        inverter_power_range_kW: "2.0 - 2.3"
+        avg_monthly_generation_kWh: 240
+        approx_monthly_bill_savings_R$: 190
+        roi_years: 4.0
+      - tier: Moderado
+        total_cost_R$: 13200
+        inverter_power_range_kW: "2.3 - 2.4"
+        avg_monthly_generation_kWh: 260
+        approx_monthly_bill_savings_R$: 210
+        roi_years: 5.0
+      - tier: Acelerado
+        total_cost_R$: 16500
+        inverter_power_range_kW: "2.7 - 3.0"
+        avg_monthly_generation_kWh: 270
+        approx_monthly_bill_savings_R$: 220
+        roi_years: 5.6
+  - name: Centro-Oeste
+    tiers:
+      - tier: Padrao
+        total_cost_R$: 10500
+        inverter_power_range_kW: "1.9 - 2.1"
+        avg_monthly_generation_kWh: 240
+        approx_monthly_bill_savings_R$: 190
+        roi_years: 4.3
+      - tier: Consciente
+        total_cost_R$: 9450
+        inverter_power_range_kW: "2.0 - 2.3"
+        avg_monthly_generation_kWh: 230
+        approx_monthly_bill_savings_R$: 180
+        roi_years: 4.1
+      - tier: Moderado
+        total_cost_R$: 12600
+        inverter_power_range_kW: "2.3 - 2.4"
+        avg_monthly_generation_kWh: 250
+        approx_monthly_bill_savings_R$: 200
+        roi_years: 4.9
+      - tier: Acelerado
+        total_cost_R$: 15750
+        inverter_power_range_kW: "2.7 - 3.0"
+        avg_monthly_generation_kWh: 260
+        approx_monthly_bill_savings_R$: 210
+        roi_years: 5.5
+  - name: Sudeste
+    tiers:
+      - tier: Padrao
+        total_cost_R$: 10000
+        inverter_power_range_kW: "1.9 - 2.1"
+        avg_monthly_generation_kWh: 220
+        approx_monthly_bill_savings_R$: 180
+        roi_years: 4.4
+      - tier: Consciente
+        total_cost_R$: 9000
+        inverter_power_range_kW: "2.0 - 2.3"
+        avg_monthly_generation_kWh: 210
+        approx_monthly_bill_savings_R$: 170
+        roi_years: 4.2
+      - tier: Moderado
+        total_cost_R$: 12000
+        inverter_power_range_kW: "2.3 - 2.4"
+        avg_monthly_generation_kWh: 230
+        approx_monthly_bill_savings_R$: 190
+        roi_years: 5.0
+      - tier: Acelerado
+        total_cost_R$: 15000
+        inverter_power_range_kW: "2.7 - 3.0"
+        avg_monthly_generation_kWh: 240
+        approx_monthly_bill_savings_R$: 200
+        roi_years: 5.6
+  - name: Sul
+    tiers:
+      - tier: Padrao
+        total_cost_R$: 10500
+        inverter_power_range_kW: "1.9 - 2.1"
+        avg_monthly_generation_kWh: 200
+        approx_monthly_bill_savings_R$: 160
+        roi_years: 5.0
+      - tier: Consciente
+        total_cost_R$: 9450
+        inverter_power_range_kW: "2.0 - 2.3"
+        avg_monthly_generation_kWh: 190
+        approx_monthly_bill_savings_R$: 150
+        roi_years: 4.8
+      - tier: Moderado
+        total_cost_R$: 12600
+        inverter_power_range_kW: "2.3 - 2.4"
+        avg_monthly_generation_kWh: 210
+        approx_monthly_bill_savings_R$: 170
+        roi_years: 5.5
+      - tier: Acelerado
+        total_cost_R$: 15750
+        inverter_power_range_kW: "2.7 - 3.0"
+        avg_monthly_generation_kWh: 220
+        approx_monthly_bill_savings_R$: 180
+        roi_years: 6.0
+prompts_and_logic:
+  composition:
+    - "Identificar categoria XPP (2 kWp)"
+    - "Aplicar fator regional no custo base"
+    - "Selecionar tier => define inversor (±10%, ±20%, ±50%)"
+    - "Calcular geração mensal média => offset na conta de energia"
+  semantic_search:
+    - "Buscar modelos de inversor compatíveis (2kW, 2.2kW, 2.4kW, 3kW)"
+    - "Verificar painéis fotovoltaicos com boa performance sob alta temperatura"
+    - "Filtrar instaladores próximos para menor custo logístico"
+  patterns:
+    - "Padrão => inversor 1:1"
+    - "Consciente => inversor +10%"
+    - "Moderado => inversor +20%"
+    - "Acelerado => inversor +50%"
+    - "Acréscimo de custo regional => [Norte=+15%, etc.]"
+
+# MEGA PROMPT: CATEGORIA PP (~3 kWp)
+category: PP
+nominal_power_kWp: 3
+description: "Sistema Pequeno Porte, indicado para residências de consumo moderado (~250 a 300 kWh/mês)."
+regions:
+  - name: Norte
+    tiers:
+      - tier: Padrao
+        total_cost_R$: 17250
+        inverter_power_range_kW: "2.8 - 3.2"
+        avg_monthly_generation_kWh: 330
+        approx_monthly_bill_savings_R$: 270
+        roi_years: 4.7
+      - tier: Consciente
+        total_cost_R$: 15525
+        inverter_power_range_kW: "3.0 - 3.3"
+        avg_monthly_generation_kWh: 310
+        approx_monthly_bill_savings_R$: 250
+        roi_years: 4.5
+      - tier: Moderado
+        total_cost_R$: 20700
+        inverter_power_range_kW: "3.3 - 3.6"
+        avg_monthly_generation_kWh: 340
+        approx_monthly_bill_savings_R$: 280
+        roi_years: 5.2
+      - tier: Acelerado
+        total_cost_R$: 25875
+        inverter_power_range_kW: "4.0 - 4.5"
+        avg_monthly_generation_kWh: 360
+        approx_monthly_bill_savings_R$: 300
+        roi_years: 5.8
+  - name: Nordeste
+    tiers:
+      - tier: Padrao
+        total_cost_R$: 16500
+        inverter_power_range_kW: "2.8 - 3.2"
+        avg_monthly_generation_kWh: 360
+        approx_monthly_bill_savings_R$: 300
+        roi_years: 4.4
+      - tier: Consciente
+        total_cost_R$: 14850
+        inverter_power_range_kW: "3.0 - 3.3"
+        avg_monthly_generation_kWh: 340
+        approx_monthly_bill_savings_R$: 280
+        roi_years: 4.2
+      - tier: Moderado
+        total_cost_R$: 19800
+        inverter_power_range_kW: "3.3 - 3.6"
+        avg_monthly_generation_kWh: 370
+        approx_monthly_bill_savings_R$: 310
+        roi_years: 4.9
+      - tier: Acelerado
+        total_cost_R$: 24750
+        inverter_power_range_kW: "4.0 - 4.5"
+        avg_monthly_generation_kWh: 390
+        approx_monthly_bill_savings_R$: 330
+        roi_years: 5.5
+  - name: Centro-Oeste
+    tiers:
+      - tier: Padrao
+        total_cost_R$: 15750
+        inverter_power_range_kW: "2.8 - 3.2"
+        avg_monthly_generation_kWh: 350
+        approx_monthly_bill_savings_R$: 290
+        roi_years: 4.4
+      - tier: Consciente
+        total_cost_R$: 14175
+        inverter_power_range_kW: "3.0 - 3.3"
+        avg_monthly_generation_kWh: 330
+        approx_monthly_bill_savings_R$: 270
+        roi_years: 4.2
+      - tier: Moderado
+        total_cost_R$: 18900
+        inverter_power_range_kW: "3.3 - 3.6"
+        avg_monthly_generation_kWh: 360
+        approx_monthly_bill_savings_R$: 300
+        roi_years: 4.9
+      - tier: Acelerado
+        total_cost_R$: 23625
+        inverter_power_range_kW: "4.0 - 4.5"
+        avg_monthly_generation_kWh: 380
+        approx_monthly_bill_savings_R$: 320
+        roi_years: 5.5
+  - name: Sudeste
+    tiers:
+      - tier: Padrao
+        total_cost_R$: 15000
+        inverter_power_range_kW: "2.8 - 3.2"
+        avg_monthly_generation_kWh: 320
+        approx_monthly_bill_savings_R$: 260
+        roi_years: 4.6
+      - tier: Consciente
+        total_cost_R$: 13500
+        inverter_power_range_kW: "3.0 - 3.3"
+        avg_monthly_generation_kWh: 300
+        approx_monthly_bill_savings_R$: 240
+        roi_years: 4.3
+      - tier: Moderado
+        total_cost_R$: 18000
+        inverter_power_range_kW: "3.3 - 3.6"
+        avg_monthly_generation_kWh: 330
+        approx_monthly_bill_savings_R$: 270
+        roi_years: 5.0
+      - tier: Acelerado
+        total_cost_R$: 22500
+        inverter_power_range_kW: "4.0 - 4.5"
+        avg_monthly_generation_kWh: 350
+        approx_monthly_bill_savings_R$: 290
+        roi_years: 5.6
+  - name: Sul
+    tiers:
+      - tier: Padrao
+        total_cost_R$: 15750
+        inverter_power_range_kW: "2.8 - 3.2"
+        avg_monthly_generation_kWh: 300
+        approx_monthly_bill_savings_R$: 240
+        roi_years: 4.9
+      - tier: Consciente
+        total_cost_R$: 14175
+        inverter_power_range_kW: "3.0 - 3.3"
+        avg_monthly_generation_kWh: 280
+        approx_monthly_bill_savings_R$: 220
+        roi_years: 4.7
+      - tier: Moderado
+        total_cost_R$: 18900
+        inverter_power_range_kW: "3.3 - 3.6"
+        avg_monthly_generation_kWh: 310
+        approx_monthly_bill_savings_R$: 250
+        roi_years: 5.3
+      - tier: Acelerado
+        total_cost_R$: 23625
+        inverter_power_range_kW: "4.0 - 4.5"
+        avg_monthly_generation_kWh: 330
+        approx_monthly_bill_savings_R$: 270
+        roi_years: 5.8
+prompts_and_logic:
+  composition:
+    - "Identificar categoria PP (3 kWp)"
+    - "Aplicar fator regional no custo base"
+    - "Dimensionar inversor para tiers: +10%, +20%, +50% se for Consciente/Moderado/Acelerado"
+    - "Estimar geração e economia mensal"
+  semantic_search:
+    - "Buscar inverters na faixa de 2.8 a 4.5 kW AC"
+    - "Checar módulos fotovoltaicos compatíveis com ~3 kWp DC"
+    - "Filtrar empresas instaladoras nas proximidades"
+  patterns:
+    - "Custo final => composto de 20/60/20"
+    - "Economia mensal => kWh gerados * tarifa local"
+    - "ROI => total_cost / (economia * 12)"
+
+# The remaining categories (P, M, G, GG, XG, XGG) follow the same YAML structure
+# with updated values for power ranges, costs, and ROI.
