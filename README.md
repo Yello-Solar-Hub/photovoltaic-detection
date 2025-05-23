@@ -135,3 +135,38 @@ In particular, focusing only on the residential area images we got on the test s
 
 ### Pre-trained models & data
 Both are available [here](https://drive.google.com/drive/folders/1nwEv1DNEPEkCbO4TQbw965zjbOVL-x5k?usp=sharing)
+
+## Web Interface
+
+A minimal Next.js application is available in `apps/web` and configured using Turborepo. To run the web interface you need Node.js and npm installed.
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start development server
+
+```bash
+npm run dev
+```
+
+This will start the Next.js server on <http://localhost:3000>. The Python code in this repository can be integrated by exposing APIs or running the existing scripts separately (e.g. `python run.py`) and connecting to them from the frontend.
+
+### Build
+
+```bash
+npm run build
+```
+
+
+### Cheese data API
+
+The Next.js app exposes a sample API route under `/api/cheese` that retrieves open data about cheeses from [OpenFoodFacts](https://world.openfoodfacts.org/). When the development server is running you can query it locally:
+
+```bash
+curl http://localhost:3000/api/cheese
+```
+
+This request returns a JSON payload with a list of cheeses including their names, brands and an image URL if available.
