@@ -135,3 +135,58 @@ In particular, focusing only on the residential area images we got on the test s
 
 ### Pre-trained models & data
 Both are available [here](https://drive.google.com/drive/folders/1nwEv1DNEPEkCbO4TQbw965zjbOVL-x5k?usp=sharing)
+
+## Web Interface
+
+A minimal Next.js application is available in `apps/web` and configured using Turborepo. To run the web interface you need Node.js and npm installed.
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start development server
+
+```bash
+npm run dev
+```
+
+This will start the Next.js server on <http://localhost:3000>. The Python code in this repository can be integrated by exposing APIs or running the existing scripts separately (e.g. `python run.py`) and connecting to them from the frontend.
+
+### Build
+
+```bash
+npm run build
+```
+
+
+### Admin dashboard
+
+A small Next.js admin panel is provided in `apps/admin`. Launch it locally with:
+
+```bash
+npm run dev --workspace=apps/admin
+```
+
+The dashboard can be extended to display job status from the Airflow workflows.
+
+### Airflow solar workflow
+
+Example DAGs are available under `airflow/dags`. To run them locally:
+
+```bash
+pip install apache-airflow
+AIRFLOW_HOME=./airflow airflow standalone
+```
+
+Trigger the sample workflow with:
+
+```bash
+airflow dags trigger solar_project_workflow
+```
+
+### Continuous Integration
+
+GitHub Actions in `.github/workflows` install dependencies and run the build for the monorepo on each push or pull request. A second workflow automatically opens an issue whenever a pull request is created.
+

@@ -132,3 +132,10 @@ dmypy.json
 **/data
 model/best_model02122020.pt
 *.pt
+
+# Node.js
+node_modules/
+.next/
+dist/
+
+airflow/logs/
