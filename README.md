@@ -135,3 +135,35 @@ In particular, focusing only on the residential area images we got on the test s
 
 ### Pre-trained models & data
 Both are available [here](https://drive.google.com/drive/folders/1nwEv1DNEPEkCbO4TQbw965zjbOVL-x5k?usp=sharing)
+
+## Web Interface
+
+A minimal Next.js application is available in `apps/web` and configured using Turborepo. To run the web interface you need Node.js and npm installed.
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start development server
+
+```bash
+npm run dev
+```
+
+This will start the Next.js server on <http://localhost:3000>. The Python code in this repository can be integrated by exposing APIs or running the existing scripts separately (e.g. `python run.py`) and connecting to them from the frontend.
+
+### Build
+
+```bash
+npm run build
+```
+
+
+## Documentation
+
+A product requirements document is available at `documents/PRD.md` and describes the platform vision along with payment flows and tokenization features.
+
+Several placeholder packages are located under `packages/` that integrate popular libraries such as Shadcn UI, Radix components, Framer Motion, D3, Three.js, Mapillary, OSM BR, MapLibre, and OpenAI Codex. These will facilitate advanced visualizations, agent capabilities and multi‑source search for energy projects.
+
