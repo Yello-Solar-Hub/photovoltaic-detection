@@ -7,7 +7,7 @@ from torch.utils.data import DataLoader
 from torch.utils.data import DataLoader, ConcatDataset
 from train.train import *
 from tempfile import TemporaryFile
-from process_data.normalize import * 
+from process_data.normalize import *
 
 from model.unet import *
 from loss.loss import *
@@ -55,4 +55,3 @@ if __name__ ==  '__main__':
     history_train_loss, history_val_loss, history_train_iou, history_val_iou = training_model(train_loader,loss_function,optimizer,model,num_epochs,scheduler,val_loader)
 
     torch.save(model.state_dict(), 'model/trained_model.pt')
- 

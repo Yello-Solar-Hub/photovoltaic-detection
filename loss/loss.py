@@ -11,7 +11,7 @@ def sigmoid(x):
 
 def iou(pred,target):
     '''Compute the intersection over union between a prediction and a targer
-    
+
     Args:
         pred (np.array): predicted value
         target (np.array): targeted value, usually the label
@@ -28,12 +28,12 @@ def iou(pred,target):
     result = np.sum(intersection)/np.sum(union)
     if math.isnan(result):
         result = 0
-    
+
     return result
 
 def accuracy(pred,target,normalize=True, sample_weight=None):
     '''Compute the accuracy between a prediction and a target, which is equivalent to (TP+TN)/total
-    
+
     Args:
         pred (np.array): predicted value
         target (np.array): targeted value, usually the label
