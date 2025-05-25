@@ -1,12 +1,18 @@
 {
   "name": "photovoltaic-monorepo",
   "private": true,
-  "workspaces": ["apps/*", "packages/*"],
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build"
   },
   "devDependencies": {
     "turbo": "^1.10.14"
+  },
+  "dependencies": {
+    "@qdrant/js-client-rest": "^1.14.1"
   }
 }
