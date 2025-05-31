@@ -41,12 +41,12 @@ class DataLoaderSegmentation(data.Dataset):
             image = TF.rotate(image,90)
             mask = TF.rotate(mask,90)
         
-        if random.random() > 0:
+        if random.random() > 0.5:
             i, j, h, w = transforms.RandomCrop.get_params(image, output_size=(248, 248))
             image = TF.crop(image, i, j, h, w)
             mask = TF.crop(mask, i, j, h, w)
 
-        if random.random() > 0:
+        if random.random() > 0.5:
             sigma = np.random.uniform(0,0.05)
             image = TF.gaussian_blur(image, 3, sigma=sigma)
 
@@ -58,7 +58,7 @@ class DataLoaderSegmentation(data.Dataset):
         # AUGMENTATION
 
 
-        if random.random() > 0:
+        if random.random() > 0.5:
             bright = np.random.normal(1,0.1)
             image = TF.adjust_brightness(image,bright)
         
