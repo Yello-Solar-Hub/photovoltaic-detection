@@ -22,16 +22,18 @@ def seed_torch(seed=0):
     torch.backends.cudnn.deterministic = True
     
 
-def test_model(test_loader,model):
-    """ Evaluate the model on a training set, with reported error the mean IoU
+def test_model(test_loader, model):
+    """Evaluate the model on a test set and return average metrics.
 
     Args:
-        test_loader (DataLoader): Training set on which the model will be evaluated on
+        test_loader (DataLoader): Test set on which the model will be evaluated
         model (Model): Model to be tested
 
     Returns:
-        FLoat: Mean IoU on tested set
-        Flaot: Mean Accuracy on tested set
+        float: Mean IoU on the test set
+        float: Mean accuracy on the test set
+        float: Mean recall on the test set
+        float: Mean precision on the test set
     """
     
     iou_test = []
