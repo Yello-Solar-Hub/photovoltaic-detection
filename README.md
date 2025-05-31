@@ -1,6 +1,6 @@
 # Detecting available rooftop area from satellite images to install photovoltaic panels
 
-The repository contains the code for Machine Learning course 2020 (CS-433) project 2 at [EPFL](https://www.epfl.ch/en/) in partnership with [LESO-PB Lab](https://www.epfl.ch/labs/leso/) and it is also the baseline code for the reasearch project: 'Quantification of the suitable area for rooftop solar panel installation from overhead imagery using Convolutional Neural Networks' [[IOPscience](https://iopscience.iop.org/article/10.1088/1742-6596/2042/1/012002)].
+The repository contains the code for Machine Learning course 2020 (CS-433) project 2 at [EPFL](https://www.epfl.ch/en/) in partnership with [LESO-PB Lab](https://www.epfl.ch/labs/leso/) and it is also the baseline code for the research project: 'Quantification of the suitable area for rooftop solar panel installation from overhead imagery using Convolutional Neural Networks' [[IOPscience](https://iopscience.iop.org/article/10.1088/1742-6596/2042/1/012002)].
 ```
 @inproceedings{castello2021quantification,
   title={Quantification of the suitable rooftop area for solar panel installation from overhead imagery using Convolutional Neural Networks},
